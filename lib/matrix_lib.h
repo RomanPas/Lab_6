@@ -106,7 +106,7 @@ public:
 	~Matrix() = default;
 
 	Helper<T, DEF> operator[](size_t index) {
-		return Helper<T, DEF>::Helper(&data_, index);
+		return typename Helper<T, DEF>::Helper(&data_, index);
 	}
 
 	size_t size() const {
@@ -119,11 +119,11 @@ public:
 	}
 
 	HelperIterator<T, DEF> begin() {
-		return HelperIterator<T, DEF>::HelperIterator(&data_, true);
+		return typename HelperIterator<T, DEF>::HelperIterator(&data_, true);
 	}
 
 	HelperIterator<T, DEF> end() {
-		return HelperIterator<T, DEF>::HelperIterator(&data_, false);
+		return typename HelperIterator<T, DEF>::HelperIterator(&data_, false);
 	}
 
 private:

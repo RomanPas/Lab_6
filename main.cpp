@@ -20,7 +20,7 @@ int main() {
 		cout << endl;
 	}
 
-	cout << matrix.size() << endl; // check
+	cout << matrix.size() << endl;
 
 	for (const auto& m : matrix) {
 		int x;
